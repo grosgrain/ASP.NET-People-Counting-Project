@@ -1,0 +1,50 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!--
+        Guyuan Guo's Final Project
+    -->
+    <title>Guyuan Guo's Final Project</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img src="Images/header.jpg" />
+    </header>
+    <nav id="top">
+        <ul>
+        <li><asp:HyperLink ID="Home" runat="server" NavigateUrl="Default.aspx">Home</asp:HyperLink></li>
+        <li><asp:HyperLink ID="Names" runat="server" NavigateUrl="Names.aspx">Chinese Family Names</asp:HyperLink></li>
+        <li><asp:HyperLink ID="People" runat="server" NavigateUrl="People.aspx">List of Chinese in US</asp:HyperLink></li>
+        <li><asp:HyperLink ID="Add" runat="server" NavigateUrl="Add.aspx">Add Your Information</asp:HyperLink></li>
+        <li><asp:HyperLink ID="Contact" runat="server" NavigateUrl="Contact.aspx">Contact US</asp:HyperLink></li>
+        </ul>
+    </nav>
+    <section id="wrapper">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    </ContentTemplate>
+    </asp:UpdatePanel>
+    </form>
+</section>
+   
+ <footer>
+    &copy;&nbsp;&nbsp;Guyuan Guo's Final Project 
+</footer>
+
+</body>
+
+
+</html>
